@@ -1,0 +1,32 @@
+{
+  "name": "launchpad",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf dist/ && babel src -d dist --source-maps",
+    "start": "npm run build && node -r source-map-support/register dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\\"
+  },
+  "author": "\\",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/runtime": "^7.8.4"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "binance-api-node": "^0.10.4",
+    "dotenv": "^8.2.0",
+    "moment": "^2.27.0",
+    "source-map-support": "^0.5.19",
+    "winston": "^3.3.3",
+    "winston-daily-rotate-file": "^4.5.0"
+  }
+}

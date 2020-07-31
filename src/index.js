@@ -29,9 +29,10 @@ async function startLoop() {
                 let assetDiff = getAssetDiff(prevAssets, newAssets)
                 if (assetDiff.length) {
                     await sendMessage(`
-xxx[Binance] NEW SYMBOL FOUND xxxx
-${ assetDiff}
-`)
+                            xxx[Binance] NEW SYMBOL FOUND xxxx
+                            ${ assetDiff}
+                                `)
+                    fs.writeFileSync(path, newAssets)
                 } else {
                     logger.info(`No new symbol found`)
                 }
